@@ -1,5 +1,8 @@
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
-import React from "react";
+import { useTheme } from "@ui-kitten/components";
+import React, { useContext } from "react";
+
+import { Theming } from "../services/theme.service";
 
 import { HomeNavigator } from "./home.navigator";
 
@@ -15,8 +18,24 @@ const navigatorTheme = {
 	},
 };
 
-export const AppNavigator = (): React.ReactElement => (
-	<NavigationContainer theme={navigatorTheme}>
-		<HomeNavigator />
-	</NavigationContainer>
-);
+export const AppNavigator = (): React.ReactElement => {
+	const theme = useTheme();
+	const themeContext = useContext(Theming.ThemeContext);
+
+	return (
+		<NavigationContainer
+			theme={{
+				...navigatorTheme,
+				colors: {
+					...navigatorTheme.colors,
+					background:
+						themeContext.currentTheme === "dark"
+							? theme["color-basic-800"]
+							: theme["color-basic-100"],
+				},
+			}}
+		>
+			<HomeNavigator />
+		</NavigationContainer>
+	);
+};

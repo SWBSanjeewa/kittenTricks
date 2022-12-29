@@ -20,7 +20,7 @@ export interface DataProps {
 
 export interface AutocompletePropsCustom extends AutocompleteProps {
 	data?: DataProps[];
-	renderItem?: ({ title: string, releaseYear: number }) => any;
+	renderItem?: (params: { title: string; releaseYear: number }) => any;
 }
 
 const defaultData: DataProps[] = [

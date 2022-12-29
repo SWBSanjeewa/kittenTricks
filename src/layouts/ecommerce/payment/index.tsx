@@ -28,7 +28,7 @@ export default ({ navigation }): React.ReactElement => {
 
 	const renderFooter = (): React.ReactElement => (
 		<Card style={styles.placeholderCard} onPress={onPlaceholderCardPress}>
-			<CreditCardIcon {...styles.creditCardIcon} />
+			<CreditCardIcon {...(styles.creditCardIcon as any)} />
 			<Text appearance="hint" category="s1">
 				Add New Card
 			</Text>

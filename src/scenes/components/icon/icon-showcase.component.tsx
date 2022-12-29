@@ -40,7 +40,7 @@ export const IconShowcase = (props: IconProps): React.ReactElement => {
 			autoCapitalize="none"
 			autoCorrect={false}
 			caption="Unfocus to change icon"
-			captionIcon={renderIcon}
+			// captionIcon={renderIcon}
 			accessoryRight={renderIcon}
 			onChangeText={onInputChangeText}
 			onBlur={onInputBlur}

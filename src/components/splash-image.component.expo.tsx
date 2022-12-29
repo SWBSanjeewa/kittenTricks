@@ -27,7 +27,7 @@ export const SplashImage = (props: LoadingAnimationProps): React.ReactElement | 
 		setAnimationCompleted(true);
 	};
 
-	const opacity: Animated.AnimatedInterpolation = animationValue.interpolate({
+	const opacity: Animated.AnimatedInterpolation<number> = animationValue.interpolate({
 		inputRange: [0, 1],
 		outputRange: [1, 0],
 	});

@@ -2,6 +2,7 @@
 	"extends": "expo/tsconfig.base",
 	"compilerOptions": {
 		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true
+		"experimentalDecorators": true,
+		"skipLibCheck": true
 	}
 }

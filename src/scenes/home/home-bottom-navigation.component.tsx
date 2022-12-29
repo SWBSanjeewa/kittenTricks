@@ -1,7 +1,7 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { BottomNavigationTab, Divider, StyleService } from "@ui-kitten/components";
 import React from "react";
-import { Animated, StyleSheet, ViewStyle } from "react-native";
+import { Animated, ViewStyle } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { BrandBottomNavigation } from "../../components/brand-bottom-navigation.component";
