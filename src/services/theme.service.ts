@@ -1,5 +1,5 @@
 import React from "react";
-import { Appearance, AppearancePreferences, ColorSchemeName } from "react-native-appearance";
+import { Appearance, ColorSchemeName } from "react-native";
 
 import { AppStorage } from "./app-storage.service";
 
@@ -113,15 +113,13 @@ export class Theming {
 		const [currentTheme, setCurrentTheme] = React.useState<Theme>(theme);
 
 		React.useEffect(() => {
-			const subscription = Appearance.addChangeListener(
-				(preferences: AppearancePreferences): void => {
-					const appearanceTheme: Theme = Theming.createAppearanceTheme(
-						preferences.colorScheme,
-						theme,
-					);
-					setCurrentTheme(appearanceTheme);
-				},
-			);
+			const subscription = Appearance.addChangeListener((preferences): void => {
+				const appearanceTheme: Theme = Theming.createAppearanceTheme(
+					preferences.colorScheme,
+					theme,
+				);
+				setCurrentTheme(appearanceTheme);
+			});
 
 			return () => subscription.remove();
 		}, []);
@@ -156,7 +154,7 @@ export class Theming {
 		appearance: ColorSchemeName,
 		preferredTheme: Theme,
 	): Theme => {
-		if (appearance === "no-preference") {
+		if (appearance === "light") {
 			return preferredTheme;
 		}
 		return appearance;
