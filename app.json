@@ -4,15 +4,12 @@
 		"slug": "kitten-tricks",
 		"version": "2.4.0",
 		"description": "UI Kitten Demo Application",
-		"githubUrl": "https://github.com/akveo/kittenTricks",
 		"ios": {
-			"bundleIdentifier": "com.akveo.kittentricks",
-			"appStoreUrl": "https://itunes.apple.com/us/app/kitten-tricks/id1246143230",
+			"bundleIdentifier": "com.cr4zyc4t.kittentricks",
 			"buildNumber": "3"
 		},
 		"android": {
-			"package": "com.akveo.kittenTricks",
-			"playStoreUrl": "https://play.google.com/store/apps/details?id=com.akveo.kittenTricks",
+			"package": "com.cr4zyc4t.kittentricks",
 			"versionCode": 3
 		},
 		"privacy": "public",
