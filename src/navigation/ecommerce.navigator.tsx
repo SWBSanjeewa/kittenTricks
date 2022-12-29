@@ -25,7 +25,7 @@ const EcommerceMenuNavigator = (): React.ReactElement => (
 );
 
 export const EcommerceNavigator = (): React.ReactElement => (
-	<Stack.Navigator headerMode="none">
+	<Stack.Navigator screenOptions={{ headerShown: false }}>
 		<Stack.Screen name="Ecommerce" component={EcommerceMenuNavigator} />
 		<Stack.Screen name="AddNewCard" component={AddNewCardScreen} />
 		<Stack.Screen name="ProductDetails1" component={ProductDetails1Screen} />

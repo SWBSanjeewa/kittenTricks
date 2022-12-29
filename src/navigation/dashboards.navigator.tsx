@@ -20,7 +20,7 @@ const DashboardsMenuNavigator = (): React.ReactElement => (
 );
 
 export const DashboardsNavigator = (): React.ReactElement => (
-	<Stack.Navigator headerMode="none">
+	<Stack.Navigator screenOptions={{ headerShown: false }}>
 		<Stack.Screen name="Dashboards" component={DashboardsMenuNavigator} />
 		<Stack.Screen name="Trainings1" component={Trainings1Screen} />
 		<Stack.Screen name="Trainings2" component={Trainings2Screen} />

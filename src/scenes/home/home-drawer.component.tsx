@@ -11,17 +11,23 @@ import {
 import React, { ReactElement, useState } from "react";
 import { StyleSheet, View } from "react-native";
 
-import { BookIcon, GithubIcon } from "../../components/icons";
+import { BookIcon, GithubIcon, LayoutIcon } from "../../components/icons";
 import { SafeAreaLayout } from "../../components/safe-area-layout.component";
 import { AppInfoService } from "../../services/app-info.service";
 import { WebBrowserService } from "../../services/web-browser.service";
-
-const version: string = AppInfoService.getVersion();
 
 export const HomeDrawer = ({ navigation }): DrawerElement => {
 	const [selectedIndex, setSelectedIndex] = useState<IndexPath>(null);
 
 	const DATA = [
+		{
+			title: "Home",
+			icon: LayoutIcon,
+			onPress: () => {
+				navigation.toggleDrawer();
+				navigation.navigate("Home");
+			},
+		},
 		{
 			title: "Libraries",
 			icon: GithubIcon,

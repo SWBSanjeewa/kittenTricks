@@ -32,13 +32,9 @@ const useVisibilityAnimation = (visible: boolean): ViewStyle => {
 	};
 };
 
-export const HomeBottomNavigation: React.FC<BottomTabBarProps> = ({
-	navigation,
-	state,
-	descriptors,
-}) => {
+export const HomeBottomNavigation: React.FC<BottomTabBarProps> = ({ navigation, state }) => {
 	const focusedRoute = state.routes[state.index];
-	const { tabBarVisible } = descriptors[focusedRoute.key].options;
+	const tabBarVisible = !focusedRoute.state || focusedRoute.state.index === 0;
 	const safeAreaInsets = useSafeAreaInsets();
 
 	const transforms = useVisibilityAnimation(tabBarVisible);

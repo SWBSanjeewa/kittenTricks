@@ -25,7 +25,7 @@ export interface LayoutData extends MenuItem {
 export const data: LayoutData[] = [
 	{
 		title: "Auth",
-		route: "Auth",
+		route: "LayoutAuth",
 		icon: (style: ImageStyle) => {
 			return React.createElement(ThemedIcon, {
 				...style,
@@ -36,7 +36,7 @@ export const data: LayoutData[] = [
 	},
 	{
 		title: "Social",
-		route: "Social",
+		route: "LayoutSocial",
 		icon: (style: ImageStyle) => {
 			return React.createElement(ThemedIcon, {
 				...style,
@@ -47,7 +47,7 @@ export const data: LayoutData[] = [
 	},
 	{
 		title: "Articles",
-		route: "Articles",
+		route: "LayoutArticles",
 		icon: (style: ImageStyle) => {
 			return React.createElement(ThemedIcon, {
 				...style,
@@ -58,7 +58,7 @@ export const data: LayoutData[] = [
 	},
 	{
 		title: "Messaging",
-		route: "Messaging",
+		route: "LayoutMessaging",
 		icon: (style: ImageStyle) => {
 			return React.createElement(ThemedIcon, {
 				...style,
@@ -69,7 +69,7 @@ export const data: LayoutData[] = [
 	},
 	{
 		title: "Dashboards",
-		route: "Dashboards",
+		route: "LayoutDashboards",
 		icon: (style: ImageStyle) => {
 			return React.createElement(ThemedIcon, {
 				...style,
@@ -80,7 +80,7 @@ export const data: LayoutData[] = [
 	},
 	{
 		title: "Ecommerce",
-		route: "Ecommerce",
+		route: "LayoutEcommerce",
 		icon: (style: ImageStyle) => {
 			return React.createElement(ThemedIcon, {
 				...style,

@@ -35,7 +35,7 @@ import { TopNavigationScreen } from "../scenes/components/top-navigation/top-nav
 const Stack = createStackNavigator();
 
 export const ComponentsNavigator = (): React.ReactElement => (
-	<Stack.Navigator headerMode="none">
+	<Stack.Navigator screenOptions={{ headerShown: false }}>
 		<Stack.Screen name="Components" component={ComponentsScreen} />
 		<Stack.Screen name="Autocomplete" component={AutocompleteScreen} />
 		<Stack.Screen name="Avatar" component={AvatarScreen} />

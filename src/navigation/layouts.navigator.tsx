@@ -13,13 +13,13 @@ import { SocialNavigator } from "./social.navigator";
 const Stack = createStackNavigator();
 
 export const LayoutsNavigator = (): React.ReactElement => (
-	<Stack.Navigator headerMode="none">
+	<Stack.Navigator screenOptions={{ headerShown: false }}>
 		<Stack.Screen name="Layouts" component={LayoutsScreen} />
-		<Stack.Screen name="Auth" component={AuthNavigator} />
-		<Stack.Screen name="Social" component={SocialNavigator} />
-		<Stack.Screen name="Articles" component={ArticlesNavigator} />
-		<Stack.Screen name="Messaging" component={MessagingNavigator} />
-		<Stack.Screen name="Dashboards" component={DashboardsNavigator} />
-		<Stack.Screen name="Ecommerce" component={EcommerceNavigator} />
+		<Stack.Screen name="LayoutAuth" component={AuthNavigator} />
+		<Stack.Screen name="LayoutSocial" component={SocialNavigator} />
+		<Stack.Screen name="LayoutArticles" component={ArticlesNavigator} />
+		<Stack.Screen name="LayoutMessaging" component={MessagingNavigator} />
+		<Stack.Screen name="LayoutDashboards" component={DashboardsNavigator} />
+		<Stack.Screen name="LayoutEcommerce" component={EcommerceNavigator} />
 	</Stack.Navigator>
 );

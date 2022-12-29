@@ -25,30 +25,30 @@ const initialTabRoute: string = __DEV__ ? "Components" : "Layouts";
 
 const ROOT_ROUTES: string[] = ["Home", "Layouts", "Components", "Themes"];
 
-const TabBarVisibilityOptions = ({ route }): BottomTabNavigationOptions => {
-	const isNestedRoute: boolean = route.state?.index > 0;
-	const isRootRoute: boolean = ROOT_ROUTES.includes(route.name);
+// const TabBarVisibilityOptions = ({ route }): BottomTabNavigationOptions => {
+// 	const isNestedRoute: boolean = route.state?.index > 0;
+// 	const isRootRoute: boolean = ROOT_ROUTES.includes(route.name);
 
-	return { tabBarVisible: isRootRoute && !isNestedRoute };
-};
+// 	return { headerShown: false };
+// };
+
+const tabBar = props => <HomeBottomNavigation {...props} />;
 
 const HomeTabsNavigator = (): React.ReactElement => (
 	<BottomTab.Navigator
-		screenOptions={TabBarVisibilityOptions}
+		screenOptions={{ headerShown: false }}
 		initialRouteName={initialTabRoute}
-		tabBar={props => <HomeBottomNavigation {...props} />}
+		tabBar={tabBar}
 	>
-		<BottomTab.Screen name="Layouts" component={LayoutsNavigator} />
-		<BottomTab.Screen name="Components" component={ComponentsNavigator} />
-		<BottomTab.Screen name="Themes" component={ThemesNavigator} />
+		<BottomTab.Screen name="TabLayouts" component={LayoutsNavigator} />
+		<BottomTab.Screen name="TabComponents" component={ComponentsNavigator} />
+		<BottomTab.Screen name="TabThemes" component={ThemesNavigator} />
 	</BottomTab.Navigator>
 );
 
+const drawerContent = props => <HomeDrawer {...props} />;
 export const HomeNavigator = (): React.ReactElement => (
-	<Drawer.Navigator
-		screenOptions={{ gestureEnabled: true }}
-		drawerContent={props => <HomeDrawer {...props} />}
-	>
+	<Drawer.Navigator screenOptions={{ headerShown: false }} drawerContent={drawerContent}>
 		<Drawer.Screen name="Home" component={HomeTabsNavigator} />
 		<Drawer.Screen name="Libraries" component={LibrariesScreen} />
 	</Drawer.Navigator>
