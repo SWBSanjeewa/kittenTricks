@@ -1,5 +1,5 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import { DashboardGridScreen } from "../scenes/dashboards/dashboards-grid.component";
@@ -10,7 +10,7 @@ import { Trainings1Screen } from "../scenes/dashboards/trainings-1.component";
 import { Trainings2Screen } from "../scenes/dashboards/trainings-2.component";
 
 const TopTab = createMaterialTopTabNavigator();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const DashboardsMenuNavigator = (): React.ReactElement => (
 	<TopTab.Navigator tabBar={props => <DashboardScreen {...props} />}>

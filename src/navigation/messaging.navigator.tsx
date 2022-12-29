@@ -1,5 +1,5 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import { Chat1Screen } from "../scenes/messaging/chat-1.component";
@@ -11,7 +11,7 @@ import { MessagingScreen } from "../scenes/messaging/messaging.component";
 import { Profile7Screen } from "../scenes/social/profile-7.component";
 
 const TopTab = createMaterialTopTabNavigator();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const MessagingMenuNavigator = (): React.ReactElement => (
 	<TopTab.Navigator tabBar={props => <MessagingScreen {...props} />}>

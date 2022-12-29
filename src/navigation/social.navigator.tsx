@@ -1,5 +1,5 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import { Chat1Screen } from "../scenes/messaging/chat-1.component";
@@ -20,7 +20,7 @@ import { SocialListScreen } from "../scenes/social/social-list.component";
 import { SocialScreen } from "../scenes/social/social.component";
 
 const TopTab = createMaterialTopTabNavigator();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const SocialMenuNavigator = (): React.ReactElement => (
 	<TopTab.Navigator tabBar={props => <SocialScreen {...props} />}>

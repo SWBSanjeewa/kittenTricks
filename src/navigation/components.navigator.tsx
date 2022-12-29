@@ -1,4 +1,4 @@
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import { AutocompleteScreen } from "../scenes/components/autocomplete/autocomplete.component";
@@ -32,7 +32,7 @@ import { ToggleScreen } from "../scenes/components/toggle/toggle.component";
 import { TooltipScreen } from "../scenes/components/tooltip/tooltip.component";
 import { TopNavigationScreen } from "../scenes/components/top-navigation/top-navigation.component";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export const ComponentsNavigator = (): React.ReactElement => (
 	<Stack.Navigator screenOptions={{ headerShown: false }}>

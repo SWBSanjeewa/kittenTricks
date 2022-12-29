@@ -1,5 +1,5 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import { Article1Screen } from "../scenes/articles/article-1.component";
@@ -14,7 +14,7 @@ import { ArticlesListScreen } from "../scenes/articles/articles-list.component";
 import { ArticlesScreen } from "../scenes/articles/articles.component";
 
 const TopTab = createMaterialTopTabNavigator();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const ArticlesMenuNavigator = (): React.ReactElement => (
 	<TopTab.Navigator tabBar={props => <ArticlesScreen {...props} />}>

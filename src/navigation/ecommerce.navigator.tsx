@@ -1,5 +1,5 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import { AddNewCardScreen } from "../scenes/ecommerce/add-new-card.component";
@@ -15,7 +15,7 @@ import { ProductListScreen } from "../scenes/ecommerce/product-list.component";
 import { ShoppingCartScreen } from "../scenes/ecommerce/shopping-cart.component";
 
 const TopTab = createMaterialTopTabNavigator();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const EcommerceMenuNavigator = (): React.ReactElement => (
 	<TopTab.Navigator tabBar={props => <EcommerceScreen {...props} />}>

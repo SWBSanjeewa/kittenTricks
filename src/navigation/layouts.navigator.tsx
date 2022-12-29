@@ -1,4 +1,4 @@
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
 import { LayoutsScreen } from "../scenes/layouts/layouts.component";
@@ -10,7 +10,7 @@ import { EcommerceNavigator } from "./ecommerce.navigator";
 import { MessagingNavigator } from "./messaging.navigator";
 import { SocialNavigator } from "./social.navigator";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export const LayoutsNavigator = (): React.ReactElement => (
 	<Stack.Navigator screenOptions={{ headerShown: false }}>
