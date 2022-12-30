@@ -12,6 +12,7 @@
 			"package": "com.cr4zyc4t.kittentricks",
 			"versionCode": 3
 		},
+		"jsEngine": "hermes",
 		"privacy": "public",
 		"platforms": ["ios", "android", "web"],
 		"orientation": "portrait",
@@ -19,12 +20,16 @@
 		"icon": "./src/assets/images/image-app-icon.png",
 		"splash": {
 			"image": "src/assets/images/image-splash.png",
+			"backgroundColor": "#F7F9FC",
 			"resizeMode": "contain"
 		},
 		"androidStatusBar": {
 			"barStyle": "dark-content",
 			"backgroundColor": "#F7F9FC"
 		},
-		"entryPoint": "node_modules/expo/AppEntry.js"
+		"assetBundlePatterns": ["src/assets/images/*", "src/assets/fonts", "src/layouts/**/assets/*"],
+		"updates": {
+			"fallbackToCacheTimeout": 20
+		}
 	}
 }
